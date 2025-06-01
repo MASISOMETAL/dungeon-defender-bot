@@ -14,7 +14,7 @@ export default {
                 + 'Ejemplo: `<<res -14 17 -12 -6 | 411 380 394`');
         }
 
-        const diferencias = grupo1.map(num => (num < 39 ? 39 - num : 0));
+        const diferencias = grupo1.map(num => (num < 29 ? 29 - num : 0));
         const totalGastado = diferencias.reduce((acc, num) => acc + num, 0);
         let restanteGrupo2 = grupo2[2] - totalGastado;
         if (restanteGrupo2 < 0) restanteGrupo2 = 0;
@@ -22,9 +22,8 @@ export default {
         const valorItem = grupo2[0] + grupo2[1] + restanteGrupo2;
 
         message.reply(
-            `💰 **Total gastado para llegar a 39:** \`${totalGastado}\`\n`
-            + `📊 **Nuevo estado del grupo 2:**\n`
-            + `- 🟢 El valor del item es: \`${valorItem}\``
+            `**Total gastado para llegar a 29:** \`${totalGastado}\`\n` +
+            `- El valor del item es: \`${valorItem}\``
         );
     }
 };

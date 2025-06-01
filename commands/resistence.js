@@ -53,7 +53,7 @@ export default {
         message.reply(
             `**Total de puntos gastados para alcanzar 29:** \`${totalGastado}\`\n` +
             `**Nuevo valor del ítem:** \`${valorItem}\`\n` +
-            `**Con el madafakin 40%:** \`${bonusItem}\``
+            `**Con el madafakin 40%:** \`${bonusItem + valorItem}\``
         );
     }
 };

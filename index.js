@@ -38,3 +38,18 @@ client.once('ready', () => {
 });
 
 client.login(BOT_TOKEN);
+
+// Server Dummy
+
+import http from "http"
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('El bot está funcionando.\n');
+});
+
+// Configurar el puerto
+const PORT = process.env.PORT || 2400;
+server.listen(PORT, () => {
+  console.log(`Servidor web nativo corriendo en el puerto ${PORT}`);
+});

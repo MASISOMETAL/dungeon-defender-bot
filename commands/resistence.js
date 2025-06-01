@@ -19,15 +19,12 @@ export default {
         let restanteGrupo2 = grupo2[2] - totalGastado;
         if (restanteGrupo2 < 0) restanteGrupo2 = 0;
 
-        const nuevoValor1 = grupo2[0] + restanteGrupo2;
-        const nuevoValor2 = grupo2[1] + restanteGrupo2;
+        const valorItem = grupo2[0] + grupo2[1] + restanteGrupo2;
 
         message.reply(
             `💰 **Total gastado para llegar a 39:** \`${totalGastado}\`\n`
             + `📊 **Nuevo estado del grupo 2:**\n`
-            + `- 🟢 Primer valor actualizado: \`${nuevoValor1}\`\n`
-            + `- 🟢 Segundo valor actualizado: \`${nuevoValor2}\`\n`
-            + `- 🟢 Lo que quedó del tercero después de la resta: \`${restanteGrupo2}\``
+            + `- 🟢 El valor del item es: \`${valorItem}\``
         );
     }
 };

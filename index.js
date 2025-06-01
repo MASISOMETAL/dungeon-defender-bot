@@ -6,7 +6,13 @@ import { join } from 'path';
 const TOKEN = process.env.BOT_TOKEN;
 const PREFIX = '<<';
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
+const client = new Client({
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent
+  ]
+});
 
 client.commands = new Collection();
 

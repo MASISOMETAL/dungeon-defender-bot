@@ -18,24 +18,22 @@ export default {
         // 🟢 1. Función para calcular puntos requeridos
         const calcularPuntosNecesarios = (valor) => {
             let puntos = 0;
+
             while (valor < 29) {
                 if (valor >= -17 && valor < -13) {
                     valor += 2;
-                    puntos++;
                 } else if (valor >= -13 && valor < 14) {
                     valor += 1;
-                    puntos++;
                 } else if (valor >= 14 && valor < 20) {
                     valor += 2;
-                    puntos++;
                 } else if (valor >= 20 && valor < 22) {
                     valor += 3;
-                    puntos++;
                 } else if (valor >= 22 && valor < 29) {
                     valor += 1;
-                    puntos++;
                 }
+                puntos++; // 🔥 Se cuenta cada incremento correctamente
             }
+
             return puntos;
         };
 

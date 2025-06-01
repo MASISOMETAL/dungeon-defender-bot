@@ -47,11 +47,13 @@ export default {
 
         // 🔄 4. Repartir lo que queda entre los primeros dos números del grupo 2
         const valorItem = grupo2[0] + grupo2[1] + restanteGrupo2;
+        const bonusItem = (valorItem * 40) % 100
 
         // 🟢 5. Responder con el resultado
         message.reply(
-            `💰 **Total de puntos gastados para alcanzar 29:** \`${totalGastado}\`\n` +
-            `📊 **Nuevo valor del ítem:** \`${valorItem}\``
+            `**Total de puntos gastados para alcanzar 29:** \`${totalGastado}\`\n` +
+            `**Nuevo valor del ítem:** \`${valorItem}\`\n` +
+            `**Con el madafakin 40%:** \`${bonusItem}\``
         );
     }
 };

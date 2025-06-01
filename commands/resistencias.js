@@ -42,7 +42,7 @@ export default {
     // 📢 Respuesta al usuario
     interaction.reply(
       `**Resistencias:** ${grupo1[0]}, ${grupo1[1]}, ${grupo1[2]}, ${grupo1[3]},\n` +
-      `**Stat:** ${grupo2[0]}, **Hab1 o 2:** ${grupo1[3]},\n` +
+      `**Stat:** ${grupo2[0]}, **Hab1 o 2:** ${grupo2[1]},\n` +
       `**Total gastado para llegar a 39:** \`${totalGastado}\`\n` +
       `- 🟢 El valor del item seria: \`${valorItem}\``
     );

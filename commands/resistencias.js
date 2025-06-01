@@ -30,7 +30,7 @@ export default {
 
     // 🟢 1. Calcular cuánto falta para llegar a 39
     const diferencias = grupo1.map(num => (num < 39 ? 39 - num : 0));
-    const totalGastado = diferencias.reduce((acc, num) => acc + num, 0);    
+    const totalGastado = diferencias.reduce((acc, num) => acc + num, 0);
 
     // 🟢 2. Restar el total gastado al tercer número del segundo parámetro
     let restanteGrupo2 = grupo2[2] - totalGastado;
@@ -41,8 +41,10 @@ export default {
 
     // 📢 Respuesta al usuario
     interaction.reply(
-      `💰 **Total gastado para llegar a 39:** \`${totalGastado}\`\n`
-      + `- 🟢 El valor del item seria: \`${valorItem}\``
+      `**Resistencias:** ${grupo1[0]}, ${grupo1[1]}, ${grupo1[2]}, ${grupo1[3]},\n` +
+      `**Stat:** ${grupo2[0]}, **Hab1 o 2:** ${grupo1[3]},\n` +
+      `**Total gastado para llegar a 39:** \`${totalGastado}\`\n` +
+      `- 🟢 El valor del item seria: \`${valorItem}\``
     );
   }
 };

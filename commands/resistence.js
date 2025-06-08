@@ -44,12 +44,12 @@ export default {
         const puntosGastados = grupo1.map(num => calcularPuntosNecesarios(num));
         const totalGastado = puntosGastados.reduce((acc, num) => acc + num, 0);
 
-        // 🔄 3. Restar el gasto del tercer número del grupo 2 (si hay solo 2, será `0`)
-        let restanteGrupo2 = grupo2[2] - totalGastado;
-        if (restanteGrupo2 < 0) restanteGrupo2 = 0;
+        if (grupo2[2]) {
+            grupo2[2] = 0
+        }
 
         // 🔄 4. Repartir lo que queda entre los primeros dos números del grupo 2
-        const valorItem = grupo2[0] + grupo2[1] + restanteGrupo2;
+        const valorItem = grupo2[0] + grupo2[1] + grupo2[2] - totalGastado;
         const bonusItem = (valorItem * 40) / 100;
 
         // 🟢 5. Responder con el resultado
